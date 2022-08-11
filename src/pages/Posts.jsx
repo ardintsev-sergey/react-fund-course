@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PostService from '../components/API/PostService';
+import PostService from '../API/PostService';
 import { useFetching } from '../components/hooks/useFetching';
 import { usePosts } from '../components/hooks/usePosts';
 import PostFilter from '../components/PostFilter';
