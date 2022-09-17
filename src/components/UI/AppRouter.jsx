@@ -1,10 +1,6 @@
 import React, { useContext } from 'react'
-import { Route, Routes, Redirect, Navigate } from 'react-router-dom';
-import About from '../../pages/About';
-import Posts from '../../pages/Posts';
-import Error from '../../pages/Error';
-import PostIdPage from '../../pages/PostIdPage';
-import { privateRoutes, publicRoutes, routes } from '../../router/router';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { privateRoutes, publicRoutes } from '../../router/router';
 import { AuthContext } from '../../context/context';
 import Loader from './Loader/Loader';
 
@@ -26,7 +22,7 @@ const AppRouter = () => {
                         key={route.path} 
                     />)}
                 
-                <Route path="/*" element={<Navigate to="/posts" replace />} />)
+                <Route path="/*" element={<Navigate to="/posts" replace />} />
             </Routes>
             : 
             <Routes>
@@ -37,7 +33,7 @@ const AppRouter = () => {
                         element={<route.element />} 
                         key={route.path}
                     />)}
-                <Route path="/*" element={<Navigate to="/login" replace />} />)
+                <Route path="/*" element={<Navigate to="/login" replace />} />
             </Routes>
     )
 }
